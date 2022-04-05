@@ -1,7 +1,6 @@
 import unittest
 
 from config import browser
-
 from locators.checkbox_locators import CHEKCBOX_URL, CHECKED_CHECKBOX, VB_CHECKBOX, C_CHECKBOX, DESELECT_CHECKBOX, \
     ALl_CHECKBOX
 

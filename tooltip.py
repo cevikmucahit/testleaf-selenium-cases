@@ -1,10 +1,9 @@
-import unittest
 import time
+import unittest
 
 from selenium.webdriver import Keys
 
 from config import browser
-
 from locators.tooltip_locators import TOOLTIP_URL, INPUT
 
 

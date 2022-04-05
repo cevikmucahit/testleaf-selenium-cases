@@ -1,9 +1,10 @@
-import requests
 import unittest
+
+import requests
+from selenium.webdriver import ActionChains
 
 from config import browser
 from locators.images_locators import IMAGE_URL, HOME_IMAGE, BROKEN_IMAGE, MOUSE_IMAGE
-from selenium.webdriver import ActionChains
 
 
 class ImagePage(unittest.TestCase):

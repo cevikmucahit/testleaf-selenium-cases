@@ -1,7 +1,6 @@
 import unittest
 
 from config import browser
-
 from locators.button_locators import BUTTONS_URL, HOME_BUTTON, COLOR_BUTTON, POSITION_BUTTON, SIZE_BUTTON
 
 

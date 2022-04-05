@@ -21,7 +21,7 @@ from sortables import SortablePage
 from table import TablePage
 from tooltip import TooltipPage
 from upload import UploadPage
-from wait_for_alert import WaitalertPage
+from wait_for_alert import WaitAlertPage
 from wait_for_text_change import TextchangePage
 from window import WindowPage
 
@@ -46,7 +46,7 @@ sortables_cases = unittest.TestLoader().loadTestsFromTestCase(SortablePage)
 table_cases = unittest.TestLoader().loadTestsFromTestCase(TablePage)
 tooltip_cases = unittest.TestLoader().loadTestsFromTestCase(TooltipPage)
 upload_cases = unittest.TestLoader().loadTestsFromTestCase(UploadPage)
-wait_for_alert_cases = unittest.TestLoader().loadTestsFromTestCase(WaitalertPage)
+wait_for_alert_cases = unittest.TestLoader().loadTestsFromTestCase(WaitAlertPage)
 wait_for_text_change_cases = unittest.TestLoader().loadTestsFromTestCase(TextchangePage)
 window_cases = unittest.TestLoader().loadTestsFromTestCase(WindowPage)
 

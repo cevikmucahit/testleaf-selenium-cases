@@ -1,7 +1,6 @@
 import unittest
 
 from config import browser
-
 from locators.hyperlink_locators import HYPERLINK_URL, HOME_LINK, FIND_LINK, ERROR_LINK, COUNT_LINK
 
 

@@ -1,11 +1,13 @@
 import unittest
 
-from config import browser
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
+
+from config import browser
 from locators.wait_for_alert_locators import WAITALERT_URL, ALERT_BUTTON
 
-class WaitalertPage(unittest.TestCase):
+
+class WaitAlertPage(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = browser()
@@ -17,15 +19,15 @@ class WaitalertPage(unittest.TestCase):
 
         wait = WebDriverWait(self.driver, 10)
 
-        wait.until(EC.alert_is_present())
+        wait.until(ec.alert_is_present())
         alert = self.driver.switch_to.alert
 
-
-        self.assertIn("Hurray",alert.text)
+        self.assertIn("Hurray", alert.text)
 
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,7 +1,8 @@
 import unittest
 
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 from config import browser
 from locators.textchance_locators import TEXTCHANGE_URL, BUTTON
 
@@ -15,7 +16,7 @@ class TextchangePage(unittest.TestCase):
     def test_text_change(self):
         wait = WebDriverWait(self.driver, 10)
 
-        wait.until(EC.text_to_be_present_in_element(BUTTON, "Click ME!"))
+        wait.until(ec.text_to_be_present_in_element(BUTTON, "Click ME!"))
 
     @classmethod
     def tearDownClass(cls):

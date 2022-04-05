@@ -1,11 +1,11 @@
 import unittest
 
-from config import browser
 from selenium.webdriver import Keys
+from selenium.webdriver.support.ui import Select
 
+from config import browser
 from locators.dropdown_locators import DROPDOWN_URL, INDEX_DROPDOWN, TEXT_DROPDOWN, VALUE_DROPDOWN, \
     OPTIONS_COUNT_DROPDOWN, KEYS_DROPDOWN, MULTIPLE_DROPDOWN
-from selenium.webdriver.support.ui import Select
 
 
 class DropdownPage(unittest.TestCase):

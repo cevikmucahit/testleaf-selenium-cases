@@ -1,6 +1,7 @@
 import unittest
-from locators.table_locators import TABLE_URL, TABLE_COLUMN, TABLE_ROW, PROGRESS_COLUMN, COMPLETED_PROGRESS
+
 from config import browser
+from locators.table_locators import TABLE_URL, TABLE_COLUMN, TABLE_ROW, PROGRESS_COLUMN, COMPLETED_PROGRESS
 
 
 class TablePage(unittest.TestCase):

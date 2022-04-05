@@ -1,7 +1,8 @@
 import unittest
 
-from config import browser
 from selenium.webdriver.common.action_chains import ActionChains
+
+from config import browser
 from locators.advance_web_table_locators import ADVANCE_URL, NAME_LIST, NAME_HEAD
 
 

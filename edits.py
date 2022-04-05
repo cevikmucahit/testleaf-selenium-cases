@@ -1,6 +1,7 @@
 import unittest
 
 from selenium.webdriver.common.keys import Keys
+
 from config import browser
 from locators.edits_locators import EDITS_URL, EMAIL_INPUT, TAB_INPUT, GET_VALUE_INPUT, CLEAR_INPUT, DISABLED_INPUT
 

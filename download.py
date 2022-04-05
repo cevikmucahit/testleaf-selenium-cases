@@ -1,8 +1,9 @@
+import time
 import unittest
 
 from config import browser
-import time
 from locators.download_locators import DOWNLOAD_URL, EXEL_DOWNLOAD
+
 
 class DownloadPage(unittest.TestCase):
     @classmethod
@@ -14,15 +15,13 @@ class DownloadPage(unittest.TestCase):
         download_links = self.driver.find_elements(*EXEL_DOWNLOAD)
         exel_download = download_links[1]
         exel_download.click()
-        prefs = {'download.default_directory': '/path/to/dir'}
-
-
 
         time.sleep(5)
 
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
+
 
 if __name__ == "__main__":
     unittest.main()

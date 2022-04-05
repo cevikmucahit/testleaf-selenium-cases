@@ -1,9 +1,10 @@
 import unittest
 
+from selenium.webdriver.support import expected_conditions as ec
+from selenium.webdriver.support.ui import WebDriverWait
+
 from config import browser
 from locators.window_locators import WINDOW_URL, WINDOW_BUTTON, MULTIPLE_WINDOW, CLOSE_NEW_WINDOWS, WAIT_BUTTON
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 
 class WindowPage(unittest.TestCase):
@@ -46,7 +47,7 @@ class WindowPage(unittest.TestCase):
 
         expected_window_count = 3
 
-        wait.until(EC.number_of_windows_to_be(expected_window_count))
+        wait.until(ec.number_of_windows_to_be(expected_window_count))
 
         self.assertEqual(expected_window_count, len(self.driver.window_handles))
 

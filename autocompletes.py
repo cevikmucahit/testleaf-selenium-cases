@@ -1,7 +1,8 @@
+import time
 import unittest
 
 from selenium.webdriver import Keys
-import time
+
 from config import browser
 from locators.autocomplete_locators import AUTOCOMPLETE_URL, INPUT
 

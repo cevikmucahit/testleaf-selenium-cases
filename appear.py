@@ -1,7 +1,7 @@
 import unittest
 
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 
 from config import browser
 from locators.appear_locators import APPEAR_URL, APPEAR_BUTTON
@@ -16,7 +16,7 @@ class AppearPage(unittest.TestCase):
     def test_appear_element(self):
         wait = WebDriverWait(self.driver, 10)
 
-        wait.until(EC.text_to_be_present_in_element(APPEAR_BUTTON, "Voila! I'm here Guys"))
+        wait.until(ec.text_to_be_present_in_element(APPEAR_BUTTON, "Voila! I'm here Guys"))
 
     @classmethod
     def tearDownClass(cls):
@@ -24,4 +24,4 @@ class AppearPage(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.TestCase
+    unittest.main()
