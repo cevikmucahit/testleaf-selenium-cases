@@ -1,7 +1,6 @@
-import time
 import unittest
 
-from selenium.webdriver import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 
 from config import browser
 from locators.tooltip_locators import TOOLTIP_URL, INPUT
@@ -15,13 +14,12 @@ class TooltipPage(unittest.TestCase):
 
     def test_interact_with_tooltip(self):
         tooltip_input = self.driver.find_element(*INPUT)
-        tooltip_input.send_keys("mucahit")
-        time.sleep(2)
-        tooltip_input.send_keys(Keys.ARROW_DOWN)
+        tooltip_input_attribute = tooltip_input.get_attribute("title")
 
-        tooltip_input.send_keys(Keys.ENTER)
+        action = ActionChains(self.driver)
+        action.move_to_element(tooltip_input).perform()
 
-        self.assertIn("mucahit", tooltip_input.get_attribute("value"))
+        self.assertEqual(tooltip_input_attribute, "Enter your Name")
 
     @classmethod
     def tearDownClass(cls):
